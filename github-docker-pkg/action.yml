@@ -1,0 +1,13 @@
+name: 'github-docker-pkg'
+description: 'Action to build a docker container and push to github package'
+inputs:
+  repo-token:
+    description: 'The GITHUB_TOKEN secret'
+    required: true
+    default: ''
+outputs:
+  docker-url: # id of output
+    description: 'The URL for the docker container'
+runs:
+  using: 'node12'
+  main: 'index.js'
